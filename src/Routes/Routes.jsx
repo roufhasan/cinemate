@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import MovieList from "../Pages/MovieList";
 import MovieDetails from "../Pages/MovieDetails";
+import Search from "../Pages/Search";
 
 export const router = createBrowserRouter([
   {
@@ -10,23 +11,27 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <MovieList />,
+        element: <MovieList apiPath="movie/now_playing" />,
       },
       {
         path: "/movies/popular",
-        element: <MovieList />,
+        element: <MovieList apiPath="movie/popular" />,
       },
       {
         path: "/movies/top",
-        element: <MovieList />,
+        element: <MovieList apiPath="movie/top_rated" />,
       },
       {
         path: "/movies/upcoming",
-        element: <MovieList />,
+        element: <MovieList apiPath="movie/upcoming" />,
       },
       {
         path: "/movie/:id",
         element: <MovieDetails />,
+      },
+      {
+        path: "/search",
+        element: <Search apiPath="search/movie" />,
       },
     ],
   },
