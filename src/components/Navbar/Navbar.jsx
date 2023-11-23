@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className="bg-white border-b-2 border-gray-200 dark:bg-gray-900">
+      <nav className="bg-white border-b-2 border-gray-200 dark:bg-gray-900 dark:border-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             to="/"
