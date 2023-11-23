@@ -4,9 +4,13 @@ import Footer from "../components/Footer/Footer";
 
 const Main = () => {
   return (
-    <main>
-      <Navbar />
-      <Outlet />
+    <main className="max-w-[1920px] mx-auto">
+      <div className="min-h-[95vh]">
+        <Navbar />
+        <div className="max-w-7xl mx-auto px-4">
+          <Outlet />
+        </div>
+      </div>
       <Footer />
     </main>
   );
