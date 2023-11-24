@@ -13,19 +13,19 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <MovieList apiPath="movie/now_playing" />,
+        element: <MovieList apiPath="movie/now_playing" title="Home" />,
       },
       {
         path: "/movies/popular",
-        element: <MovieList apiPath="movie/popular" />,
+        element: <MovieList apiPath="movie/popular" title="Popular" />,
       },
       {
         path: "/movies/top",
-        element: <MovieList apiPath="movie/top_rated" />,
+        element: <MovieList apiPath="movie/top_rated" title="Top Rated" />,
       },
       {
         path: "/movies/upcoming",
-        element: <MovieList apiPath="movie/upcoming" />,
+        element: <MovieList apiPath="movie/upcoming" title="Upcoming" />,
       },
       {
         path: "/movie/:id",

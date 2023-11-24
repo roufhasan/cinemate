@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Card from "../components/Card/Card";
 import { popularMovies } from "../api/movies";
+import useTitle from "../hooks/useTitle";
 
-const MovieList = ({ apiPath }) => {
+const MovieList = ({ apiPath, title }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -10,6 +11,9 @@ const MovieList = ({ apiPath }) => {
       .then((data) => setMovies(data))
       .catch((err) => console.log(err));
   }, [apiPath]);
+
+  useTitle(title);
+
   return (
     <main>
       <section>

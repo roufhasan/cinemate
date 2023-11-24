@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import Card from "../components/Card/Card";
 import { popularMovies } from "../api/movies";
+import useSearchTitle from "../hooks/useSearchTitle";
 
 const Search = ({ apiPath }) => {
   const [searchParams] = useSearchParams();
@@ -13,6 +14,8 @@ const Search = ({ apiPath }) => {
       .then((data) => setMovies(data))
       .catch((err) => console.log(err));
   }, [apiPath, queryTerm]);
+
+  useSearchTitle(queryTerm);
   return (
     <main>
       <section>

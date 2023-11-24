@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import PageNotFoundImg from "../assets/images/pagenotfound.png";
 import Button from "../components/Button/Button";
+import useTitle from "../hooks/useTitle";
 
 const ErrorPage = () => {
+  useTitle("Error!");
   return (
     <main>
       <section className="flex flex-col justify-center px-2">

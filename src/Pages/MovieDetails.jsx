@@ -1,9 +1,12 @@
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
 const MovieDetails = () => {
   const movieDetailsData = useLoaderData();
   console.log(movieDetailsData);
   const posterImg = `https://image.tmdb.org/t/p/w500${movieDetailsData.poster_path}`;
+
+  useTitle(movieDetailsData.title);
   return (
     <main>
       <section className="flex justify-around flex-wrap py-5">
