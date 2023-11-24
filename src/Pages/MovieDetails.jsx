@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import useTitle from "../hooks/useTitle";
+import SimilarMovies from "./SimilarMovies";
 
 const MovieDetails = () => {
   const movieDetailsData = useLoaderData();
@@ -84,6 +85,7 @@ const MovieDetails = () => {
           </p>
         </div>
       </section>
+      <SimilarMovies id={movieDetailsData.id} />
     </main>
   );
 };
