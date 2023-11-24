@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import MovieList from "../Pages/MovieList";
 import MovieDetails from "../Pages/MovieDetails";
 import Search from "../Pages/Search";
+import ErrorPage from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: "/search",
         element: <Search apiPath="search/movie" />,
+      },
+      {
+        path: "/*",
+        element: <ErrorPage />,
       },
     ],
   },
