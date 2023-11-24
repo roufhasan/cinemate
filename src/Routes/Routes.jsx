@@ -4,6 +4,7 @@ import MovieList from "../Pages/MovieList";
 import MovieDetails from "../Pages/MovieDetails";
 import Search from "../Pages/Search";
 import ErrorPage from "../Pages/ErrorPage";
+import { movieDetails } from "../api/movies";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ export const router = createBrowserRouter([
       {
         path: "/movie/:id",
         element: <MovieDetails />,
+        loader: ({ params }) => movieDetails(params.id),
       },
       {
         path: "/search",
